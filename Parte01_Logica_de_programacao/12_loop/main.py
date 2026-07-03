@@ -8,6 +8,7 @@ try:
 
     while n >= 0:
         print(n)
+        n -= 1
     pass
 except:
     print("Não foi possível exibir a contagem. ")
