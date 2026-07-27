@@ -19,7 +19,7 @@ try:
     nome =input("Por favor digite seu Nome:").strip()
     idade = int(input("Por favor digite sua idade"))
     
-    while true:
+    while True:
         
         print("\n=========================================\n")
         print("Bem vindo ao Cinema da Bagunça")
@@ -37,9 +37,40 @@ try:
             
             case 1:
                 if (idade > 0):
-                    print("Bem vindo a sala 1, Bom filme")
+                    print("Bem vindo a sala 1, Bom filme. ")
+                    break
                     
-            case 2:   
+            case 2: 
+                if (idade > 12):
+                    print("Bem vindo a sala 2, Bom filme. ")
+                    break
+                else:
+                    print("Opss, você não tem idade Suficiente. Por favor retorne ao MENU. ")
+                    continue
+            case 3:
+                if (idade > 14):
+                    print("Bem vindo a sala 3, Bom filme. ")
+                    break
+                else:
+                    print("Opss, você não tem idade Suficiente. Por favor retorne ao MENU. ")
+                    continue
+            case 4:
+                if (idade > 14):
+                    print("Bem vindo a sala 4, Bom filme. ")
+                    break
+                else:
+                    print("Opss, você não tem idade Suficiente. Por favor retorne ao MENU. ")
+                    continue
+            case 5:
+                if (idade > 14):
+                    print("Bem vindo a sala 5, Bom filme. ")
+                    break
+                else:
+                    print("Opss, você não tem idade Suficiente. Por favor retorne ao MENU. ")
+                    continue
+            case _:
+                print("Opção inválida, Por favor digite um número do MENU. ")
+                continue
     
     
 except Exception as e:
