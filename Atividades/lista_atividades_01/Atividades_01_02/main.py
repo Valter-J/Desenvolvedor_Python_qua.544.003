@@ -40,9 +40,8 @@ def menu():
     return indice
 
     
-def pegarFilme():
+def pegarFilme(indice):
 
-    indice = menu()
 
     filmes = [["A volta dos que não foram. ", 0],
                  ["A roda Quadrada. ", 12],
@@ -59,9 +58,9 @@ def pegarFilme():
     return valor
 
 
-def gerarBilhete(nome, idade):
+def gerarBilhete(nome, idade, indice):
 
-    valorFilme= pegarFilme()
+    valorFilme= pegarFilme(indice)
 
     with open(f"Atividades_01_02/arquivos/{nome}.txt", "w", encoding="utf-8") as arquivo:
         arquivo.write(
@@ -70,7 +69,7 @@ def gerarBilhete(nome, idade):
             f"\n=============={nome}===================="
             f"\n=============={idade}==================="
             f"\n======{valorFilme}======"
-            "======================================"
+            "======================="
         )
     
 def abrirbilhete(nome):
@@ -81,9 +80,9 @@ def abrirbilhete(nome):
         print(conteudo)
 
 
-def verificacaoIdade(idade):
-    valorMenu = menu()
-    if (idade >=valorMenu):
+def verificacaoIdade(idade, valorMenu):
+    
+    if (idade >= valorMenu):
         return True
     else:
         return False
@@ -97,11 +96,12 @@ try:
     while True:
 
         processo = True
-        menu()
-        pegarFilme()
+        indice = menu()
+        
+        pegarFilme(indice)
         limpar()
-        if verificacaoIdade(idade) == True:
-            gerarBilhete(nome, idade)
+        if verificacaoIdade(idade, indice) == True:
+            gerarBilhete(nome, idade, indice)
             abrirbilhete(nome)
             processo = False
             break
