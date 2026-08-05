@@ -14,8 +14,10 @@ cidades = ["São Paulo",
     "Belém",
     "Brasília" ]
 
-cidadePesquisada = input("Digite a cidade que vc deseja buscar: ").lower().strip()
 
-# Retorna resultado
-print(f"{cidadePesquisada} Encontrada." if cidadePesquisada in cidades else "Cidade não encontrada.")
-    
+cidade = input("Informe o país a ser pesquisado: ").strip().strip()
+
+
+qtd = cidades.count(cidade)
+
+print(f"{cidade} foi encontrado {qtd} vezes na lista.")

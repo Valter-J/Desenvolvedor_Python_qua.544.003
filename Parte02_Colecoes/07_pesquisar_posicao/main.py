@@ -14,8 +14,13 @@ cidades = ["São Paulo",
     "Belém",
     "Brasília" ]
 
-cidadePesquisada = input("Digite a cidade que vc deseja buscar: ").lower().strip()
 
-# Retorna resultado
-print(f"{cidadePesquisada} Encontrada." if cidadePesquisada in cidades else "Cidade não encontrada.")
-    
+cidade = input("informe a cidade a ser pesquisada: ").strip().lower()
+
+# mostrar a posição do item na lita
+if cidade in cidades:
+    indice = cidades.index(cidade)
+    print(f"Indice de {cidade} na lista é {indice}.")
+
+else:
+    print("Cidade não encontrada")
