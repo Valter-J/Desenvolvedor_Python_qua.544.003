@@ -10,4 +10,15 @@ usuario = {
 chave = input("informe o nome da chave: ").strip().lower()
 
 
-# TODO: VERIFICA SE A CHAVE EXISTE
+if chave in usuario:
+    
+    # usuário informa o novo valor para a chave
+    usuario[chave] = input(f"Informe o novo valor para a {chave}").strip()
+    
+    # Exibe o dicionário com novo valor da chave escolhida
+    for chave, valor in usuario.items():
+        print(f"{chave.capitalize()}: {valor}")
+    
+else:
+    print("Chave não encontrada")
+
