@@ -37,10 +37,13 @@ while True:
                 for chave, valor in usuarioDici:
                     print(f"{chave.capitalize()}: {valor}")
                 print(f"-"*40)
+            continue
             
         case "3":
+            # TODO: Fazer alterar usuário
             pass
         case "4":
+            # TODO: Excluir Usuário
             pass
         case "5":
             print("Até logo")
