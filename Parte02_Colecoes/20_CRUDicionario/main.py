@@ -40,11 +40,35 @@ while True:
             continue
             
         case "3":
-            # TODO: Fazer alterar usuário
-            pass
+            nome = input("Informe o nome a ser pesquisado: ").strip().title()
+            for usuario in usuarios:
+                if nome in usuario['nome']:
+                    # 2º menu
+                    print("nome")
+                    print("cpf")
+                    print("email")
+                    print("cancelar")
+                    alterar = input("Qual chave deseja alterar? ").strip().lower()
+                    if alterar in usuario:
+                        usuario[alterar] = input("Informe o novo valor: ").strip()
+                        print("Alterado com sucesso.")
+                else:
+                    # REVIEW: mensagem bugada
+                    print("Usuário não encontrado.")
+            continue
         case "4":
-            # TODO: Excluir Usuário
-            pass
+           
+            nome = input("Informe o nome a ser deletado: ").strip().title()
+            for usuario in usuarios:
+                if nome in usuario['nome']:
+                    usuarios.remove(usuario)
+                    print("Usuário deletado com sucesso!")
+                else:
+                    # REVIEW: mensagem bugada
+                    print("Usuário não encontrado.")
+                    
+            continue
+            
         case "5":
             print("Até logo")
             break
